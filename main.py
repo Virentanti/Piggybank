@@ -17,9 +17,13 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
         
         self.ui.add_btn.clicked.connect(lambda: add(self.ui.money_edit.text()))
+        print(self.ui.money_edit.text())
+        self.ui.add_btn.clicked.connect(lambda: self.ui.money_edit.setText(""))
 
-        self.ui.break_btn.clicked.connect(lambda: self.ui.stacked_widgets.setCurrentWidget(self.ui.break_page))
-        self.ui.money_label.setText(savings())
+        self.ui.break_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.savings_pg))
+        self.ui.break_btn.clicked.connect(lambda: self.ui.money_label.setText(savings()))
+        self.ui.break_btn.clicked.connect(lambda: clear())
+        
         
         
         self.show()

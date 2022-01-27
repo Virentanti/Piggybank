@@ -92,10 +92,8 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.break_btn.setText(QCoreApplication.translate("MainWindow", u"Break", None))
         self.add_btn.setText(QCoreApplication.translate("MainWindow", u"Add", None))
-#if QT_CONFIG(tooltip)
-        self.money_edit.setToolTip(QCoreApplication.translate("MainWindow", u"Enter money", None))
-#endif // QT_CONFIG(tooltip)
-        self.money_edit.setText(QCoreApplication.translate("MainWindow", u"Money", None))
+
+        self.money_edit.setPlaceholderText("Money")
         self.piggy_icon.setText("")
         self.savings_label.setText(QCoreApplication.translate("MainWindow", u"Your savings", None))
         self.money_label.setText(QCoreApplication.translate("MainWindow", u"____", None))
